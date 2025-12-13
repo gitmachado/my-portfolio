@@ -1,0 +1,26 @@
+#habilidades {
+    padding: 60px 20px;
+}
+
+.tags-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-tag {
+    background-color: var(--bg-card);
+    border: 1px solid #333;
+    color: var(--text-muted);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}

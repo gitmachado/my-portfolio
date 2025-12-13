@@ -1,0 +1,130 @@
+.stats-wrap{
+  margin-top: -127px;
+  margin-bottom: 40px;
+  display:flex;
+  justify-content:center;
+  position:relative;
+  z-index:3; /* garante que fique acima do video/hero */
+}
+
+.stats{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.stat-card{
+  width: 230px;
+  background: linear-gradient(135deg, #142846, #071223);
+  border:1px solid #1f3b68;
+  border-radius:var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  padding:15px 16px 15px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:6px;
+  position:relative;
+  overflow:hidden;
+}
+
+.stat-card::before{
+  content:"";
+  position:absolute;
+  inset:-25% -25% 50% -25%;
+  background:
+    radial-gradient(120px 120px at 20% 20%, rgba(120,200,255,.28), transparent 65%),
+    radial-gradient(100px 100px at 80% 10%, rgba(90,140,255,.22), transparent 60%);
+  opacity:.45;
+  filter: blur(10px);
+  animation: glow-pulse 7s ease-in-out infinite alternate;
+  pointer-events:none;
+  z-index:0;
+}
+
+.stat-card::after{
+  content:"";
+  position:absolute;
+  inset:-30% -30% auto auto;
+  width:140px; height:140px;
+  background: radial-gradient(circle, #78d2ff30, transparent 60%);
+  transform: translate(20px, -20px);
+  z-index:0;
+}
+
+.stat-icon{
+  width:48px; height:48px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, #2a4d80, #1c2f58);
+  border:1px solid #2f4e7a;
+  margin-bottom:0;
+}
+
+.stat-icon img{
+  width:36px; height:36px;
+  display:block;
+  opacity:1;
+  filter: drop-shadow(0 0 6px rgba(120,200,255,.3));
+}
+
+.stats .stat-card:nth-child(1) .stat-icon img{
+  width:37px; height:37px;
+}
+
+.stats .stat-card:nth-child(2) .stat-icon img{
+  width:38px; height:38px;
+}
+
+.stats .stat-card:nth-child(3) .stat-icon img{
+  width:33px; height:33px;
+  margin-top:-2px;
+}
+
+.stat-card > *{
+  position:relative;
+  z-index:1;
+}
+
+.stat-title{
+  font-family: Orbitron, sans-serif;
+  font-size:13.5px;
+  letter-spacing:1.2px;
+  margin:0;
+  text-transform:uppercase;
+}
+
+.stat-value{
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.6px;
+  color:#dcecff;
+  margin:0;
+}
+
+.stat-sub{
+  font-size:10.5px;
+  color:var(--muted);
+  opacity:.9;
+  margin: -5px 0 0 0; /* aproxima ainda mais do valor */
+}
+
+@media (max-width: 720px){
+  .stats-wrap{margin-top:5px;} /* move 35px para baixo no mobile */
+}
+
+@media (max-width: 520px){
+  .stat-card{width:min(100%, 260px);}
+}
+
+@keyframes glow-pulse{
+  0%{opacity:.22; transform: translateY(4px) scale(1);}
+  24%{opacity:.82; transform: translateY(-16px) scale(1.08);}
+  52%{opacity:.5; transform: translateY(12px) scale(0.96);}
+  78%{opacity:.7; transform: translateY(-8px) scale(1.05);}
+  100%{opacity:.22; transform: translateY(0) scale(1.04);}
+}

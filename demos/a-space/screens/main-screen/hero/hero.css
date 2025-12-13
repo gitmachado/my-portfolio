@@ -1,0 +1,79 @@
+.hero{position:relative;padding:30px 0 10px; margin-top:-47px;}
+
+.hero-shell{
+  position:relative;
+  min-height:460px;
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  background: url("../../../assets/earth-hero.webp");
+  background-size:cover;
+  background-position:center;
+  border:1px solid #1f3b68; /* mesma borda dos cards de about */
+  box-shadow: var(--shadow-1);
+  display:flex;
+  align-items:stretch;
+  padding:20px 0;
+}
+
+.hero-shell::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(120deg, rgba(5,12,26,.55), rgba(5,12,26,.38) 55%, rgba(5,12,26,.18)),
+    linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.15) 50%, transparent 85%);
+  z-index:1;
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:56px 54px 70px;
+  width:min(62%, 620px);
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.hero-kicker{
+  font-size:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--accent-2);
+  opacity:.8;
+  margin-bottom:6px;
+}
+
+.hero-title{
+  font-family: Orbitron, sans-serif;
+  font-size:48px;
+  line-height:1.02;
+  letter-spacing:1.5px;
+  margin:0 0 6px 0;
+  text-transform:uppercase;
+}
+
+.hero-title span{display:block;}
+
+.hero-text{
+  color:var(--muted);
+  font-size:12.6px;
+  line-height:1.6;
+  max-width:420px;
+  margin:0;
+}
+
+@media (max-width: 980px){
+  .hero-shell{min-height:380px;}
+  .hero-content{width:100%;padding:46px 38px 64px;}
+}
+
+@media (max-width: 720px){
+  .hero-title{font-size:38px;}
+}
+
+@media (max-width: 520px){
+  .hero-content{padding:38px 24px 58px;}
+  .hero-title{font-size:32px;}
+}

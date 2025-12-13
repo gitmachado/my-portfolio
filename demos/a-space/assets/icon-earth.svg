@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="as-ice-globe-v8" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BFE9FF"></stop>
+      <stop offset="0.5" stop-color="#7CC6FF"></stop>
+      <stop offset="1" stop-color="#6A7BFF"></stop>
+    </linearGradient>
+
+    <filter id="as-glow-globe-v8" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.0" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#as-glow-globe-v8)" stroke="url(#as-ice-globe-v8)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Contorno -->
+    <circle cx="32" cy="32" r="18" stroke-width="2.2"></circle>
+
+    <!-- Equador encostando -->
+    <path d="M14 32H50" stroke-width="1.5" opacity="0.85"></path>
+
+    <!-- Latitudes longas -->
+    <path d="M16 25.2
+         C23 28.3 28.8 29.4 32 29.4
+         C35.2 29.4 41 28.3 48 25.2" stroke-width="1.45" opacity="0.85"></path>
+    <path d="M16 38.8
+         C23 35.7 28.8 34.6 32 34.6
+         C35.2 34.6 41 35.7 48 38.8" stroke-width="1.45" opacity="0.85"></path>
+
+    <!-- Meridianos principais -->
+    <path d="M32 14
+         C28.7 18.8 26.9 25 26.9 32
+         C26.9 39 28.7 45.2 32 50" stroke-width="1.45" opacity="0.85"></path>
+    <path d="M32 14
+         C35.3 18.8 37.1 25 37.1 32
+         C37.1 39 35.3 45.2 32 50" stroke-width="1.45" opacity="0.85"></path>
+
+    <!-- Meridianos laterais (mesmo “estilo”, um pouco mais curvados para dentro) -->
+    <path d="M23.6 16.5
+         C22.1 20.4 21.4 24.8 21.4 32
+         C21.4 39.2 22.1 43.6 23.6 47.5" stroke-width="1.45" opacity="0.85"></path>
+    <path d="M40.4 16.5
+         C41.9 20.4 42.6 24.8 42.6 32
+         C42.6 39.2 41.9 43.6 40.4 47.5" stroke-width="1.45" opacity="0.85"></path>
+  </g>
+</svg>

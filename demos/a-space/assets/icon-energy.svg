@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="as-ice-bulb" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BFE9FF"></stop>
+      <stop offset="0.5" stop-color="#7CC6FF"></stop>
+      <stop offset="1" stop-color="#6A7BFF"></stop>
+    </linearGradient>
+  </defs>
+
+  <g stroke="url(#as-ice-bulb)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Bulbo -->
+    <path d="M32 12
+         C23.2 12 16 19.2 16 28
+         C16 35 20.2 39.1 23.6 41.9
+         C25.6 43.5 26.8 45.2 27.2 47.2
+         H36.8
+         C37.2 45.2 38.4 43.5 40.4 41.9
+         C43.8 39.1 48 35 48 28
+         C48 19.2 40.8 12 32 12 Z" stroke-width="2.2"></path>
+
+    <!-- Base (mantida, sem o tracinho de transição acima) -->
+    <path d="M26.2 52H37.8" stroke-width="2"></path>
+    <path d="M27.4 56H36.6" stroke-width="2"></path>
+    <path d="M28.6 60H35.4" stroke-width="2"></path>
+
+    <!-- Raio central (um pouco mais para cima) -->
+    <path d="M33.2 22.8
+         L27.8 31.8
+         H31.8
+         L29.6 39.3
+         L36.8 30
+         H32.8
+         L35 22.8
+         Z" stroke-width="1.8"></path>
+  </g>
+</svg>

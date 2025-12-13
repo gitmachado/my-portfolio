@@ -1,0 +1,78 @@
+﻿/* CONFIGURAÇÕES DO TEMA DARK */
+:root {
+    /* Paleta de Cores Escura */
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --bg-card-hover: #252525;
+    
+    /* Tipografia */
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    
+    /* Cores de Destaque (Neon/Tech) */
+    --accent-color: #00e5ff;
+    --accent-hover: #00b8cc;
+    
+    /* Sombras */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Botão CTA */
+.btn-cta {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--accent-color);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+/* Títulos das Seções */
+h2 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}

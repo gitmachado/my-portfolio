@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>A-SPACE | Orbitar a Terra</title>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap' rel='stylesheet'>
+  <link rel='stylesheet' href='shared.css' />
+  <link rel='stylesheet' href='header/header.css' />
+  <link rel='stylesheet' href='hero/hero.css' />
+  <link rel='stylesheet' href='about/about.css' />
+  <link rel='stylesheet' href='mission/mission.css' />
+  <link rel='stylesheet' href='function/function.css' />
+  <link rel='stylesheet' href='footer/footer.css' />
+</head>
+<body>
+  <div class='page'>
+    <div data-include='header/header.html'></div>
+    <div data-include='hero/hero.html'></div>
+
+    <main>
+      <div data-include='about/about.html'></div>
+      <div data-include='mission/mission.html'></div>
+      <div data-include='function/function.html'></div>
+    </main>
+
+    <div data-include='footer/footer.html'></div>
+  </div>
+
+  <script>
+    const initIncludes = async () => {
+      const includes = document.querySelectorAll('[data-include]');
+      for (const el of includes) {
+        const src = el.getAttribute('data-include');
+        try {
+          const res = await fetch(src);
+          if (!res.ok) throw new Error(res.statusText || 'Erro ao carregar arquivo');
+          const html = await res.text();
+          el.outerHTML = html;
+        } catch (err) {
+          console.error(`Erro ao carregar ${src}:`, err);
+          el.innerHTML = `<p style='color:#f88;font:14px Inter, system-ui,sans-serif;'>Nao foi possivel carregar ${src}.</p>`;
+        }
+      }
+    };
+
+    const initFunctionVideo = () => {
+      const video = document.querySelector('.frame-video');
+      if (!video) return;
+
+      let direction = 1; // 1 = forward, -1 = reverse
+      const THRESHOLD = 0.08;
+
+      const switchDirection = () => {
+        direction = direction === 1 ? -1 : 1;
+        video.playbackRate = direction;
+        if (direction === -1 && video.duration) {
+          video.currentTime = Math.max(video.duration - THRESHOLD, 0);
+        } else if (direction === 1) {
+          video.currentTime = 0;
+        }
+        video.play().catch(() => {});
+      };
+
+      video.loop = false;
+      video.playbackRate = direction;
+
+      video.addEventListener('loadedmetadata', () => {
+        video.playbackRate = direction;
+        video.play().catch(() => {});
+      });
+
+      video.addEventListener('timeupdate', () => {
+        if (!video.duration) return;
+        if (direction === 1 && video.currentTime >= video.duration - THRESHOLD) {
+          switchDirection();
+        } else if (direction === -1 && video.currentTime <= THRESHOLD) {
+          switchDirection();
+        }
+      });
+
+      video.addEventListener('ended', switchDirection);
+    };
+
+    (async () => {
+      await initIncludes();
+      requestAnimationFrame(initFunctionVideo);
+    })();
+  </script>
+</body>
+</html>
