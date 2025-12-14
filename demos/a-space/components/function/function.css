@@ -1,0 +1,118 @@
+﻿.function {
+  position: relative;
+  padding: 0 0 10px;
+  /* reduz mais 40px no espacamento vertical */
+  margin: 40px 0;
+}
+
+.function::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(460px 220px at 18% 40%, rgba(120, 200, 255, .12), transparent 60%),
+    radial-gradient(380px 200px at 82% 60%, rgba(90, 140, 255, .1), transparent 60%);
+  pointer-events: none;
+  opacity: .8;
+}
+
+.function-row {
+  position: relative;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  padding: 26px 24px;
+  border: 1px solid #1f3b68;
+  /* alinhado aos cards de about */
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(10, 22, 40, .88), rgba(5, 12, 26, .92));
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.function-row::before,
+.function-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.function-row::before {
+  background:
+    radial-gradient(120% 100% at 18% 30%, rgba(110, 200, 255, .18), transparent 60%),
+    radial-gradient(120% 100% at 88% 70%, rgba(100, 160, 255, .14), transparent 60%);
+  opacity: .7;
+}
+
+.function-row::after {
+  inset: auto 0 -18px 0;
+  height: 120px;
+  background: radial-gradient(70% 70% at 50% 0%, rgba(90, 180, 255, .14), transparent 70%);
+  filter: blur(18px);
+}
+
+.function-left {
+  flex: 1 1 420px;
+  min-width: 280px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.function-right {
+  flex: 1 1 340px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.frame-2 {
+  width: 100%;
+  max-width: 520px;
+  min-height: 250px;
+  border-radius: var(--radius-lg);
+  background: url("../../assets/satellite-function.webp");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #1f3b68;
+  /* alinhado aos cards de about */
+  box-shadow: var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.frame-2 .frame-line {
+  display: none;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+@media (max-width: 720px) {
+  .function {
+    margin: 40px 0;
+  }
+
+  /* sobe mais 40px no mobile e libera espaВo antes do footer */
+  .function-row {
+    flex-wrap: wrap;
+    padding: 20px 18px;
+  }
+
+  .frame-2 {
+    min-height: 220px;
+  }
+}

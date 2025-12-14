@@ -17,6 +17,7 @@
     border-radius: 50px;
     font-size: 0.9em;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .skill-tag:hover {

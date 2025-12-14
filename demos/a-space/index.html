@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
+
 <head>
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>A-SPACE | Orbitar a Terra</title>
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap' rel='stylesheet'>
-  <link rel='stylesheet' href='shared.css' />
-  <link rel='stylesheet' href='header/header.css' />
-  <link rel='stylesheet' href='hero/hero.css' />
-  <link rel='stylesheet' href='about/about.css' />
-  <link rel='stylesheet' href='mission/mission.css' />
-  <link rel='stylesheet' href='function/function.css' />
-  <link rel='stylesheet' href='footer/footer.css' />
+  <link
+    href='https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap'
+    rel='stylesheet'>
+  <link rel='stylesheet' href='shared/shared.css' />
+  <link rel='stylesheet' href='components/header/header.css' />
+  <link rel='stylesheet' href='components/hero/hero.css' />
+  <link rel='stylesheet' href='components/about/about.css' />
+  <link rel='stylesheet' href='components/mission/mission.css' />
+  <link rel='stylesheet' href='components/function/function.css' />
+  <link rel='stylesheet' href='components/footer/footer.css' />
 </head>
+
 <body>
   <div class='page'>
-    <div data-include='header/header.html'></div>
-    <div data-include='hero/hero.html'></div>
+    <div data-include='components/header/header.html'></div>
+    <div data-include='components/hero/hero.html'></div>
 
     <main>
-      <div data-include='about/about.html'></div>
-      <div data-include='mission/mission.html'></div>
-      <div data-include='function/function.html'></div>
+      <div data-include='components/about/about.html'></div>
+      <div data-include='components/mission/mission.html'></div>
+      <div data-include='components/function/function.html'></div>
     </main>
 
-    <div data-include='footer/footer.html'></div>
+    <div data-include='components/footer/footer.html'></div>
   </div>
 
   <script>
@@ -61,7 +65,7 @@
         } else if (direction === 1) {
           video.currentTime = 0;
         }
-        video.play().catch(() => {});
+        video.play().catch(() => { });
       };
 
       video.loop = false;
@@ -69,7 +73,7 @@
 
       video.addEventListener('loadedmetadata', () => {
         video.playbackRate = direction;
-        video.play().catch(() => {});
+        video.play().catch(() => { });
       });
 
       video.addEventListener('timeupdate', () => {
@@ -90,4 +94,5 @@
     })();
   </script>
 </body>
+
 </html>

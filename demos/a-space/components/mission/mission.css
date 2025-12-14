@@ -4,7 +4,7 @@
   margin: 0;
   overflow: hidden;
   isolation: isolate;
-  border-radius: var(--radius-xl);
+
   background: linear-gradient(130deg, rgba(4, 7, 13, 0.96) 18%, rgba(4, 7, 13, 0.78) 48%, rgba(4, 7, 13, 0.56) 70%, rgba(4, 7, 13, 0.32) 100%);
 }
 
@@ -12,7 +12,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../../../assets/humanity-mission.webp") center calc(50% - 45px)/cover no-repeat;
+  background: url("../../assets/humanity-mission.webp") center calc(50% - 45px)/cover no-repeat;
   opacity: .92;
   z-index: 0;
   mask-image: linear-gradient(180deg, transparent 0%, transparent 8%, rgba(0, 0, 0, .35) 22%, rgba(0, 0, 0, .7) 38%, #000 58%, #000 100%);
@@ -32,10 +32,9 @@
 }
 
 .mission-row {
-  display: flex;
   gap: 26px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
@@ -62,30 +61,7 @@
   display: none;
 }
 
-.wave-band {
-  position: relative;
-  height: 110px;
-  margin: 18px 0 6px;
-  opacity: .65;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.wave-band::before {
-  content: "";
-  width: min(980px, 100%);
-  height: 100%;
-  background:
-    radial-gradient(400px 80px at 20% 50%, rgba(110, 210, 255, .25), transparent 60%),
-    radial-gradient(400px 80px at 80% 50%, rgba(110, 160, 255, .22), transparent 60%),
-    url("../../../assets/waves.png");
-  background-size: cover;
-  background-position: center;
-  filter: blur(0.2px);
-  border-radius: 999px;
-  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-}
 
 @media (max-width: 720px) {
   .mission-row {
@@ -119,13 +95,23 @@
 
   .mission {
     padding: 30px 0 12px;
-    border-radius: 0;
+
     display: flex;
     align-items: center;
+    justify-content: center;
     min-height: 360px;
   }
 
-  .mission > .container {
+  .mission>.container {
     width: 100%;
+  }
+
+  .section-eyebrow-mission {
+    margin-top: -30px;
+    font-size: 9px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    opacity: .75;
   }
 }

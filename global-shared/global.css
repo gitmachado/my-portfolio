@@ -1,18 +1,18 @@
-﻿/* CONFIGURAÇÕES DO TEMA DARK */
+/* CONFIGURAÇÕES DO TEMA DARK */
 :root {
     /* Paleta de Cores Escura */
     --bg-body: #121212;
     --bg-card: #1e1e1e;
     --bg-card-hover: #252525;
-    
+
     /* Tipografia */
     --text-main: #e0e0e0;
     --text-muted: #a0a0a0;
-    
+
     /* Cores de Destaque (Neon/Tech) */
     --accent-color: #00e5ff;
     --accent-hover: #00b8cc;
-    
+
     /* Sombras */
     --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.5);
