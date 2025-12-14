@@ -1,5 +1,8 @@
 #habilidades {
     padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+    /* Ensures content is above background symbols */
 }
 
 .tags-wrapper {
