@@ -1,8 +1,13 @@
 footer {
-    background-color: #0a0a0a;
+    background-color: var(--bg-card);
+    border-top: 1px solid #333;
+    /* Removed glass transparency */
     padding: 40px 0;
     text-align: center;
-    border-top: 1px solid #222;
+    position: relative;
+    /* Ensure z-index works */
+    z-index: 10;
+    /* Stack above fixed background */
     color: var(--text-muted);
     font-size: 0.9em;
 }

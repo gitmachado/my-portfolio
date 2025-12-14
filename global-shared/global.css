@@ -18,6 +18,64 @@
     --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Wrapper Hero + Skills */
+.hero-skills-wrapper {
+    background: radial-gradient(circle at 50% 300px, #1a2228 0%, var(--bg-body) 60%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Símbolos de Programação no Background */
+.hero-skills-wrapper::before,
+.hero-skills-wrapper::after {
+    /* String longa com quebras de linha (\00000a) e espaços para espalhar */
+    content: "{ }       < />            ; \00000a      ()          if      func \00000a   //       return    var   \00000a      const      =>      !==";
+    position: fixed;
+    /* Mudado para fixed para acompanhar o scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Garante cobertura total da viewport */
+    height: 100vh;
+    /* Garante cobertura total da altura visível */
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgba(0, 229, 255, 0.15);
+    /* Usando tom ciano do tema (baseado no accent anterior ou var) */
+    white-space: pre-wrap;
+    /* Permite querbros de linha */
+    line-height: 3;
+    padding: 40px;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.55;
+    /* Aumentado em +5% (0.5 -> 0.55) */
+    word-spacing: 80px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    /* Mascara para limpar o centro (onde fica o conteúdo) */
+    -webkit-mask-image: radial-gradient(circle at center, transparent 30%, black 80%);
+    mask-image: radial-gradient(circle at center, transparent 30%, black 80%);
+}
+
+.hero-skills-wrapper::after {
+    /* Adicionado mais símbolos tecnológicos */
+    content: "REACT       JS       HTML \00000a     CSS          SQL      GIT \00000a   npm      yarn      docker   \00000a      aws      api      json \00000a   linux     bash     ci/cd    \00000a    redux    vue    angular   node    sass";
+    top: 100px;
+    /* Deslocamento vertical */
+    left: 50px;
+    /* Deslocamento horizontal */
+    color: rgba(0, 184, 204, 0.2);
+    /* Variação mais escura do ciano/azul do tema */
+    font-size: 2em;
+    transform: rotate(-5deg) scale(1.2);
+    opacity: 0.45;
+    /* Aumentado em +5% (0.4 -> 0.45) */
+    line-height: 4;
+}
+
 /* Estilos Globais */
 body {
     font-family: 'Poppins', sans-serif;
