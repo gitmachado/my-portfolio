@@ -20,6 +20,11 @@
     flex-direction: column;
     /* NOVO */
     max-width: 400px;
+    text-decoration: none;
+    /* Removes underline from anchor */
+    color: inherit;
+    /* Inherits text color */
+    cursor: pointer;
 }
 
 .card:hover {
