@@ -5,16 +5,7 @@
   margin: 40px 0;
 }
 
-.function::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(460px 220px at 18% 40%, rgba(120, 200, 255, .12), transparent 60%),
-    radial-gradient(380px 200px at 82% 60%, rgba(90, 140, 255, .1), transparent 60%);
-  pointer-events: none;
-  opacity: .8;
-}
+
 
 .function-row {
   position: relative;
@@ -22,12 +13,11 @@
   gap: 26px;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   padding: 26px 24px;
   border: 1px solid #1f3b68;
   /* alinhado aos cards de about */
   border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, rgba(10, 22, 40, .88), rgba(5, 12, 26, .92));
   box-shadow: var(--shadow-2);
   overflow: hidden;
   isolation: isolate;
@@ -61,6 +51,7 @@
   display: flex;
   position: relative;
   z-index: 1;
+  order: -1;
 }
 
 .function-right {
