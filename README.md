@@ -24,19 +24,19 @@ O projeto utiliza uma estrutura moderna onde componentes HTML (como Header, Hero
 
 Aqui estão os principais projetos apresentados neste portfólio:
 
-### 1. 🌌 [A-SPACE](projects/a-space/index.html)
+### 1. [A-SPACE](projects/a-space/index.html)
 **Technology & Space Innovation**
 Um site institucional futurista para uma empresa de tecnologia espacial.
 - **Destaques:** Animações sutis, gradientes imersivos e design "Dark Mode".
 - **Foco:** Visual Impactante e Leve Storytelling.
 
-### 2. 📄 [Pro Curriculum](projects/pro-curriculum/index.html)
+### 2. [Pro Curriculum](projects/pro-curriculum/index.html)
 **Professional Portfolio Template**
 Uma landing page elegante e estruturada para profissionais apresentarem seus currículos.
 - **Destaques:** Layout limpo, tipografia profissional e seções bem definidas.
 - **Foco:** Clareza e Apresentação Profissional.
 
-### 3. 📱 [AppCo](projects/app-co/index.html)
+### 3. [AppCo](projects/app-co/index.html)
 **App Landing Page**
 Uma página vibrante e focada em conversão para startups de aplicativos mobile.
 - **Destaques:** Cores vivas, CTAs estratégicos e badges oficiais das lojas de aplicativos.
