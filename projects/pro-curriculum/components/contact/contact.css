@@ -1,0 +1,24 @@
+﻿.hero-contacts {
+  border-top: 1px solid var(--border-color);
+  padding-block: 1.5rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-contacts .item-title {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+  color: #e5e5e5;
+}
+
+@media (max-width: 600px) {
+  .hero-contacts {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

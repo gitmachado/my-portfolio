@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Logo com a letra M">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00c16a" />
+      <stop offset="100%" stop-color="#0af394" />
+    </linearGradient>
+  </defs>
+  <rect width="24" height="24" rx="6" fill="#0b0c0f" />
+  <path d="M6 17V7h3.2l2.8 5 2.8-5H18v10h-2.3v-6.2l-2.7 4.7h-1l-2.7-4.7V17H6Z" fill="url(#g)" />
+</svg>
