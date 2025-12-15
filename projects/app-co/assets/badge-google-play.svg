@@ -1,0 +1,12 @@
+<svg width="190" height="56" viewBox="0 0 190 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="190" height="56" rx="8" fill="black"/>
+<rect x="1" y="1" width="188" height="54" rx="7" stroke="#333" stroke-width="0.5"/>
+<path d="M19 13.5L34.5 28L19 42.5V13.5ZM37 30.5L45.5 38.5L34.5 28L37 30.5ZM48.6 35.5L39.5 28L48.6 20.5C48.8 20.7 48.8 20.9 48.8 21.2V34.5C48.8 34.9 48.8 35.1 48.6 35.5ZM37 25.5L34.5 28L45.5 17.5L37 25.5ZM32.3 30.5L19.7 44.1C19.5 44.3 19.3 44.3 19.1 44.3C18.8 44.3 18.4 44.1 18.2 43.9L32.3 30.5ZM19.1 12C19.3 12 19.5 12 19.7 12.2L32.3 25.5L18.2 12.4C18.4 12.2 18.8 12 19.1 12Z" fill="white"/>
+<path d="M19.1 12.8V43.2L34.5 28L19.1 12.8Z" fill="#2196F3"/>
+<path d="M37 30.5L34.5 28L45.5 38.5L37 30.5Z" fill="#FFC400"/>
+<path d="M48.6 20.5L39.5 28L48.6 35.5C48.8 35.3 48.8 35.1 48.8 34.8V21.2C48.8 20.9 48.8 20.7 48.6 20.5Z" fill="#FFC400"/>
+<path d="M37 25.5L45.5 17.5L34.5 28L37 25.5Z" fill="#FF3333"/>
+<path d="M18.2 12.4L32.3 25.5L19.7 12.2C19.5 12 19.3 12 19.1 12C18.8 12 18.4 12.1 18.2 12.4Z" fill="#00C95B"/>
+<text x="58" y="21" font-family="Arial, sans-serif" font-size="10" fill="white">GET IT ON</text>
+<text x="58" y="39" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">Google Play</text>
+</svg>

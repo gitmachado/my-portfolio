@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #8A2387;
+    --secondary-color: #E94057;
+    --accent-color: #F27121;
+    --grad-1: linear-gradient(135deg, #8A2387 0%, #E94057 50%, #F27121 100%);
+    --grad-bg: linear-gradient(135deg, #4b1248 0%, #F0F2F5 100%);
+    --text-white: #ffffff;
+    --text-dark: #333333;
+    --hero-bg: #8A2387;
+    /* Fallback */
+}

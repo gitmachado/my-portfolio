@@ -1,0 +1,171 @@
+/* Hero Styles */
+.hero {
+    position: relative;
+    background: var(--hero-bg);
+    background: var(--grad-1);
+    padding-top: 150px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    border-bottom-left-radius: 20% 10%;
+    border-bottom-right-radius: 20% 10%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+    color: var(--text-white);
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.hero-form {
+    display: flex;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 30px;
+    max-width: 400px;
+    margin-bottom: 25px;
+}
+
+.hero-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    outline: none;
+}
+
+.hero-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-form button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.hero-form button:hover {
+    transform: scale(1.05);
+}
+
+.hero-video-link a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.play-icon {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.hero-image {
+    /* flex: 1; Removed flex to allow absolute positioning without modifying flex items */
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 10px;
+    /* Adjusted: moved up 5px from 15px */
+    width: 600px;
+    /* Give it enough width container */
+    pointer-events: none;
+    /* Let clicks pass through if it overlaps text, though z-index might handle it */
+}
+
+.hero-image img {
+    max-width: 550px;
+    /* Make it float a bit */
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+        max-width: 100%;
+    }
+
+    .hero-form {
+        margin: 0 auto 25px auto;
+    }
+
+    .hero-video-link a {
+        justify-content: center;
+    }
+
+    .hero-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}

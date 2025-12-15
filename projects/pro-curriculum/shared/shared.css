@@ -1,14 +1,4 @@
-﻿:root {
-  --bg-main: #050607;
-  --bg-section: #0b0c0f;
-  --bg-card: #111318;
-  --accent: #00c16a;
-  --text-main: #ffffff;
-  --text-muted: #bbbbbb;
-  --border-color: #1f2127;
-}
-
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -1,0 +1,76 @@
+/* Features Styles */
+.features {
+    padding: 100px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.section-title {
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.section-title p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 40px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background: #fff;
+    /* Ensure it has a bg if we add section bg later */
+    border: 1px solid #eee;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    background: #fdf2ff;
+    /* Very light purple */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* If relying on images, image size handles it */
+}
+
+.icon-box img {
+    width: 40px;
+    height: 40px;
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
