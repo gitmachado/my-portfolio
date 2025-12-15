@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_mm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2b2b2b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Shape (Rounded Rect like A-SPACE) -->
+  <rect x="4" y="14" width="56" height="36" rx="12" ry="12" fill="url(#grad_mm)" stroke="#00e5ff" stroke-width="2" />
+  
+  <!-- "MM" Text -->
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="'Inter', 'Roboto', sans-serif" font-weight="900" font-size="20" fill="white" letter-spacing="1">MM</text>
+
+  <!-- Gloss Effect -->
+  <path d="M10 16 Q32 20 54 16 L54 16 A 12 12 0 0 1 10 16" fill="#00e5ff" fill-opacity="0.1" />
+</svg>

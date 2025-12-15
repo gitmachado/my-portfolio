@@ -2,7 +2,12 @@ footer {
     background-color: var(--bg-card);
     border-top: 1px solid #333;
     /* Removed glass transparency */
+<<<<<<< HEAD
     padding: 40px 0;
+=======
+    padding: 20px 0;
+    /* Reduced from 40px to match Header height */
+>>>>>>> feat/add-pro-curriculum
     text-align: center;
     position: relative;
     /* Ensure z-index works */
