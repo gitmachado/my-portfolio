@@ -19,35 +19,19 @@
 
 <body>
 
-    <div data-include="components/header/header.html"></div>
-    <div data-include="components/hero/hero.html"></div>
+    <ac-header></ac-header>
+    <ac-hero></ac-hero>
 
     <main>
-        <div data-include="components/features/features.html"></div>
-        <div data-include="components/management/management.html"></div>
-        <div data-include="components/share/share.html"></div>
-        <div data-include="components/cta/cta.html"></div>
+        <ac-features></ac-features>
+        <ac-management></ac-management>
+        <ac-share></ac-share>
+        <ac-cta></ac-cta>
     </main>
 
-    <div data-include="components/footer/footer.html"></div>
+    <ac-footer></ac-footer>
 
-    <script>
-        (async () => {
-            const sections = document.querySelectorAll('[data-include]');
-            for (const el of sections) {
-                try {
-                    const res = await fetch(el.dataset.include);
-                    if (res.ok) {
-                        el.innerHTML = await res.text();
-                    } else {
-                        console.error('File not found:', el.dataset.include);
-                    }
-                } catch (err) {
-                    console.error('Error loading', el.dataset.include, err);
-                }
-            }
-        })();
-    </script>
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

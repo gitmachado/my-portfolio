@@ -20,34 +20,17 @@
 
 <body>
 
-    <div data-include="components/header/header.html"></div>
+    <app-header></app-header>
     <main>
         <div class="hero-skills-wrapper">
-            <div data-include="components/hero/hero.html"></div>
-            <div data-include="components/skills/skills.html"></div>
+            <app-hero></app-hero>
+            <app-skills></app-skills>
         </div>
-        <div data-include="components/projects/projects.html"></div>
+        <app-projects></app-projects>
     </main>
-    <div data-include="components/footer/footer.html"></div>
+    <app-footer></app-footer>
 
-    <script>
-        document.querySelectorAll('[data-include]').forEach(async (placeholder) => {
-            const file = placeholder.getAttribute('data-include');
-            try {
-                const response = await fetch(file);
-                if (!response.ok) {
-                    throw new Error(`Erro ao carregar ${file}: ${response.status}`);
-                }
-                const content = await response.text();
-                placeholder.insertAdjacentHTML('afterend', content);
-            } catch (error) {
-                console.error(error);
-            } finally {
-                placeholder.remove();
-            }
-        });
-    </script>
-
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

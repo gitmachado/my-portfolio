@@ -1,0 +1,33 @@
+export class PcAbout extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<section class="section about-section" id="about">
+  <div class="container about">
+    <div class="about-photo">
+      <img src="assets/thinking.webp" alt="About photo" />
+    </div>
+    <div>
+      <div class="section-label">Who am I?</div>
+      <h2 class="section-title">I am Mauricio Machado, a Full Stack Developer</h2>
+      <p class="about-text">
+        I’m a developer passionate about transforming ideas into functional, intuitive, and high-impact solutions.
+      </p>
+
+      <div class="about-details">
+        <div><span>Name: </span><strong>Mauricio Machado</strong></div>
+        <div><span>Age: </span><strong>24</strong></div>
+        <div><span>From: </span><strong>Rio Grande do Sul, Brazil</strong></div>
+        <div><span>Email: </span><strong>mauriciojesus.dev@gmail.com</strong></div>
+      </div>
+
+      <div class="about-actions">
+        <button class="btn-outline">Download CV</button>
+      </div>
+    </div>
+  </div>
+</section>
+        `;
+    }
+}
+
+customElements.define('pc-about', PcAbout);

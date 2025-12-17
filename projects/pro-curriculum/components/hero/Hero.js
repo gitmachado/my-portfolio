@@ -1,0 +1,29 @@
+export class PcHero extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<section class="hero container" id="home">
+  <div class="hero-left">
+    <p class="hero-subtitle">Hi There!</p>
+    <h1 class="hero-title">
+      <span>I am <span class="highlight">Developer</span></span>
+    </h1>
+    <p class="hero-text">I make the complex simple.</p>
+    <button class="btn-primary">Contact Me</button>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-photo">
+      <img src="assets/hero-icon.webp" alt="Developer portrait" />
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="line"></div>
+    </div>
+  </div>
+</section>
+        `;
+    }
+}
+
+customElements.define('pc-hero', PcHero);

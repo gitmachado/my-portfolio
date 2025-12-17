@@ -23,78 +23,19 @@
 
 <body>
   <div class='page'>
-    <div data-include='components/header/header.html'></div>
-    <div data-include='components/hero/hero.html'></div>
+    <as-header></as-header>
+    <as-hero></as-hero>
 
     <main>
-      <div data-include='components/about/about.html'></div>
-      <div data-include='components/mission/mission.html'></div>
-      <div data-include='components/function/function.html'></div>
+      <as-about></as-about>
+      <as-mission></as-mission>
+      <as-function></as-function>
     </main>
 
-    <div data-include='components/footer/footer.html'></div>
+    <as-footer></as-footer>
   </div>
 
-  <script>
-    const initIncludes = async () => {
-      const includes = document.querySelectorAll('[data-include]');
-      for (const el of includes) {
-        const src = el.getAttribute('data-include');
-        try {
-          const res = await fetch(src);
-          if (!res.ok) throw new Error(res.statusText || 'Erro ao carregar arquivo');
-          const html = await res.text();
-          el.outerHTML = html;
-        } catch (err) {
-          console.error(`Erro ao carregar ${src}:`, err);
-          el.innerHTML = `<p style='color:#f88;font:14px Inter, system-ui,sans-serif;'>Nao foi possivel carregar ${src}.</p>`;
-        }
-      }
-    };
-
-    const initFunctionVideo = () => {
-      const video = document.querySelector('.frame-video');
-      if (!video) return;
-
-      let direction = 1; // 1 = forward, -1 = reverse
-      const THRESHOLD = 0.08;
-
-      const switchDirection = () => {
-        direction = direction === 1 ? -1 : 1;
-        video.playbackRate = direction;
-        if (direction === -1 && video.duration) {
-          video.currentTime = Math.max(video.duration - THRESHOLD, 0);
-        } else if (direction === 1) {
-          video.currentTime = 0;
-        }
-        video.play().catch(() => { });
-      };
-
-      video.loop = false;
-      video.playbackRate = direction;
-
-      video.addEventListener('loadedmetadata', () => {
-        video.playbackRate = direction;
-        video.play().catch(() => { });
-      });
-
-      video.addEventListener('timeupdate', () => {
-        if (!video.duration) return;
-        if (direction === 1 && video.currentTime >= video.duration - THRESHOLD) {
-          switchDirection();
-        } else if (direction === -1 && video.currentTime <= THRESHOLD) {
-          switchDirection();
-        }
-      });
-
-      video.addEventListener('ended', switchDirection);
-    };
-
-    (async () => {
-      await initIncludes();
-      requestAnimationFrame(initFunctionVideo);
-    })();
-  </script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>

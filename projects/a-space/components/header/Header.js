@@ -1,0 +1,24 @@
+export class AsHeader extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<header>
+  <div class='container'>
+    <div class='nav'>
+      <a class='brand' href='#'>
+        <span class='brand-mark'>AS</span>
+        <span class='brand-name'>A-SPACE</span>
+      </a>
+      <nav class='nav-links'>
+        <a href='#'>Serviços</a>
+        <a href='#'>Tecnologia</a>
+        <a href='#'>Sustentabilidade</a>
+        <a href='#'>Futuro</a>
+      </nav>
+    </div>
+  </div>
+</header>
+        `;
+    }
+}
+
+customElements.define('as-header', AsHeader);

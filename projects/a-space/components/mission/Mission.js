@@ -1,0 +1,31 @@
+export class AsMission extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<section class='section mission'>
+  <div class='container'>
+    <div class='mission-row'>
+      <div class='mission-left'>
+        <div class='section-head'>
+          <span class='section-eyebrow-mission'>Nossa missão:</span>
+          <h2 class='section-title'>DESENVOLVIMENTO GLOBAL</h2>
+        </div>
+        <p class='section-text'>
+          Usamos tecnologia espacial para proteger o planeta e a vida terrestre: monitoramento climático
+          preciso, conectividade em áreas remotas e dados que melhorem a qualidade de vida
+          das pessoas, todos os dias.
+        </p>
+        <div class='btn-row'>
+          <a class='btn btn-primary' href='#'>Saiba mais</a>
+        </div>
+      </div>
+      <div class='mission-right'>
+        <div class='frame' aria-label='Moldura da imagem da missão'></div>
+      </div>
+    </div>
+  </div>
+</section>
+        `;
+    }
+}
+
+customElements.define('as-mission', AsMission);

@@ -1,0 +1,29 @@
+export class AcHero extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<section class="hero">
+    <div class="hero-bg-shape"></div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1>Planejando a Usabilidade Ideal</h1>
+            <p>Nossos projetos de design são modernos e simples e trarão grandes benefícios para o seu negócio. Saiba
+                mais sobre
+                nosso trabalho!</p>
+            <form class="hero-form">
+                <input type="email" placeholder="Seu melhor email" aria-label="Digite seu email para receber a oferta">
+                <button type="submit">Receber Oferta</button>
+            </form>
+            <div class="hero-video-link">
+                <a href="#"><span class="play-icon">▶</span> Assista ao Vídeo</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/hero-phone.webp" alt="Interface do App AppCo">
+        </div>
+    </div>
+</section>
+        `;
+    }
+}
+
+customElements.define('ac-hero', AcHero);

@@ -1,0 +1,16 @@
+export class AppFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Mauricio Machado. Desenvolvido com ☕ e código.</p>
+        <p style="margin-top: 10px;">
+            <a href="https://github.com/gitmachado" target="_blank" rel="noopener noreferrer">Acesse meu GitHub</a>
+        </p>
+    </div>
+</footer>
+        `;
+    }
+}
+
+customElements.define('app-footer', AppFooter);

@@ -1,0 +1,20 @@
+export class AppHeader extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">&lt;Mauricio<span>Machado</span>/&gt;</a>
+            <ul>
+                <li><a href="#habilidades">Skills</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="https://github.com/gitmachado" class="btn-cta" target="_blank">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+        `;
+    }
+}
+
+customElements.define('app-header', AppHeader);

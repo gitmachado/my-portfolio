@@ -1,0 +1,26 @@
+export class AsHero extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<section class='hero'>
+  <div class='container'>
+    <div class='hero-shell'>
+      <div class='hero-content'>
+        <div class='hero-kicker'>A-SPACE</div>
+        <h1 class='hero-title'>
+          <span>ORBITANDO A</span>
+          <span>TERRA</span>
+        </h1>
+        <p class='hero-text'>
+          Somos uma empresa focada em explorar, imaginar e prototipar o futuro do
+          espaço. Criamos experiências e dados que aproximam ciência e pessoas, transformando
+          curiosidade em ação e inspirando uma nova cultura espacial acessível a todos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+        `;
+    }
+}
+
+customElements.define('as-hero', AsHero);

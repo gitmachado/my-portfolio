@@ -18,29 +18,16 @@
 
 <body>
   <div class="page-wrapper">
-    <div data-include="components/header/header.html"></div>
+    <pc-header></pc-header>
     <main>
-      <div data-include="components/hero/hero.html"></div>
-      <div data-include="components/contact/contact.html"></div>
-      <div data-include="components/about/about.html"></div>
-      <div data-include="components/services/services.html"></div>
+      <pc-hero></pc-hero>
+      <pc-contact></pc-contact>
+      <pc-about></pc-about>
+      <pc-services></pc-services>
     </main>
   </div>
 
-  <script>
-    (async () => {
-      const sections = document.querySelectorAll('[data-include]');
-      for (const el of sections) {
-        try {
-          const res = await fetch(el.dataset.include);
-          el.innerHTML = await res.text();
-        } catch (err) {
-          console.error('Erro ao carregar', el.dataset.include, err);
-          el.innerHTML = '<p style="color:red">Nao foi possivel carregar ' + el.dataset.include + '</p>';
-        }
-      }
-    })();
-  </script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>

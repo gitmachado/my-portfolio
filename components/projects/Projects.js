@@ -1,0 +1,63 @@
+export class AppProjects extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = /*html*/`
+<section id="projetos">
+    <div class="container">
+        <h2>Meus Projetos</h2>
+
+        <div class="grid-projetos">
+
+            <a href="projects/a-space/index.html" class="card" target="_blank" aria-label="Ver projeto A-SPACE"
+                style="text-decoration: none; color: inherit;">
+                <div class="card-image">
+                    <img src="assets/demo_A-SPACE.webp" alt="A-SPACE Dashboard">
+                </div>
+                <div class="card-content">
+                    <h3>A-SPACE</h3>
+                    <p>Website institucional para uma empresa de
+                        tecnologia que utiliza dados de satélites para
+                        gerar insights e soluções digitais.</p>
+                    <div class="card-links">
+                        <span class="link-projeto">Live Demo ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/pro-curriculum/index.html" class="card" target="_blank"
+                aria-label="Ver projeto Pro Curriculum" style="text-decoration: none; color: inherit;">
+                <div class="card-image">
+                    <img src="assets/demo_pro_curriculum.webp" alt="Pro Curriculum Page">
+                </div>
+                <div class="card-content">
+                    <h3>Pro Curriculum</h3>
+                    <p>Landing page profissional para portfólios pessoais. Design moderno, estruturado e totalmente
+                        responsivo.</p>
+                    <div class="card-links">
+                        <span class="link-projeto">Live Demo ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projects/app-co/index.html" class="card" target="_blank" aria-label="Ver projeto AppCo"
+                style="text-decoration: none; color: inherit;">
+                <div class="card-image">
+                    <img src="assets/demo_app_co.webp" alt="AppCo Landing Page">
+                </div>
+                <div class="card-content">
+                    <h3>AppCo</h3>
+                    <p>Landing page moderna para uma startup de gerenciamento de apps. Design responsivo, vibrante e
+                        focado em conversão.</p>
+                    <div class="card-links">
+                        <span class="link-projeto">Live Demo ↗</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+        `;
+    }
+}
+
+customElements.define('app-projects', AppProjects);
